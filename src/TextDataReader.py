@@ -20,3 +20,10 @@ class TextDataReader(DataReader):
                     self.students[self.key].append(
                         (subj.strip(), int(score.strip())))
         return self.students
+
+if __name__ == '__main__':
+    path = '..\data\data.txt'
+    dr = TextDataReader()
+    a = dr.read(path)
+    print(type(a))
+    print(a)
