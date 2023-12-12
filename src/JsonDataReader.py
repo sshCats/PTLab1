@@ -15,12 +15,7 @@ class JsonDataReader(DataReader):
 
             # Convert to tuples in the data
             for student, subjects in self.students.items():
-                self.students[student] = [tuple(subject) for subject in subjects.items()]
+                self.students[student] = [tuple(subject) for subject
+                                          in subjects.items()]
 
         return self.students
-
-
-if __name__ == '__main__':
-    path = '..\data\data1.json'
-    dr = JsonDataReader()
-    print(dr.read(path))
